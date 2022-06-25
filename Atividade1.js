@@ -20,8 +20,8 @@ if (dataInformada > dataAtual) // Teste de condição para verificar a disponibi
             {
             console.log ('----------------------------------------------');
             console.log ('Você tem idade permitida para participar'); // Mensagem caso a condição de idade seja verdadeira.
-
-                if(quantidadeConvidados < 100)
+                quantidadeConvidados ++;
+                if(quantidadeConvidados < 100) // Caso fosse <=100, o programa entraria no loop com o convidado 100, aceitaria a condição e teríamos 101 participantes.
                     {
                     console.log ('----------------------------------------------');
                     console.log ('A palestra escolhida ainda tem vaga. Parabéns, você já está participando do evento!'); // Mensagem caso a condição de capacidade seja verdadeira.
