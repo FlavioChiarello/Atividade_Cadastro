@@ -2,7 +2,7 @@
 
 var readlineSync = require('readline-sync'); // Declaração da variável e Instalação do pacote para que o sistema exija a entrada manual de dados pelo usuário.
 var dataAtual = 24062022; // Data em que o projeto foi desenvolvido.
-var quantidadeConvidados = 0; // Declaração da variável a respeito da quantidade de pessoas cadastradas em cada evento disponível.
+var quantidadeConvidados = 100; // Declaração da variável a respeito da quantidade de pessoas cadastradas em cada evento disponível.
 
 console.log ('----------------------------------------------');
 
@@ -20,8 +20,8 @@ if (dataInformada > dataAtual) // Teste de condição para verificar a disponibi
             {
             console.log ('----------------------------------------------');
             console.log ('Você tem idade permitida para participar'); // Mensagem caso a condição de idade seja verdadeira.
-                quantidadeConvidados ++;
-                if(quantidadeConvidados < 100) // Caso fosse <=100, o programa entraria no loop com o convidado 100, aceitaria a condição e teríamos 101 participantes.
+                quantidadeConvidados ++; // A partir do momento em que as duas primeiras condições são satisfeitas, automaticamente o convidado tem todos os requisitos para participar. Portanto, o contador serve para adicionar uma pessoa a mais.
+                if(quantidadeConvidados <= 100) // Condição de limite de capacidade.
                     {
                     console.log ('----------------------------------------------');
                     console.log ('A palestra escolhida ainda tem vaga. Parabéns, você já está participando do evento!'); // Mensagem caso a condição de capacidade seja verdadeira.
