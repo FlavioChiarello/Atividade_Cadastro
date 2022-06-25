@@ -2,8 +2,8 @@
 
 var readlineSync = require('readline-sync'); // Declaração da variável e Instalação do pacote para que o sistema exija a entrada manual de dados pelo usuário.
 var dataAtual = 24062022; // Data em que o projeto foi desenvolvido.
-var quantidadeConvidados = 50; // Declaração da variável a respeito da quantidade de pessoas cadastradas em cada evento disponível.
-var contadorConvidados = 0; //Contador para incrementar o número de pessoas (número atualizado)
+var quantidadeConvidados = 150; // Declaração da variável a respeito da quantidade de pessoas cadastradas em cada evento disponível.
+var contadorConvidados = quantidadeConvidados; //Guardando o número de convidados na variável contadorConvidados
 console.log ('----------------------------------------------');
 
 console.log ('Bem vindo ao cadastramento online de palestras!'); // Apresentação de uma mensagem de boas vindas ao aplicativo.
@@ -21,8 +21,7 @@ if (dataInformada > dataAtual) // Teste de condição para verificar a disponibi
             console.log ('----------------------------------------------');
             console.log ('Você tem idade permitida para participar'); // Mensagem caso a condição de idade seja verdadeira.
             contadorConvidados ++;// A partir do momento em que as duas primeiras condições são satisfeitas, automaticamente o convidado tem todos os requisitos para participar. Portanto, o contador serve para adicionar uma pessoa a mais.
-            quantidadeConvidados = contadorConvidados; //Atualização da capacidade de pessoas.
-            
+
                 if(contadorConvidados <= 100) // Condição de limite de capacidade.
                     {
                     console.log ('----------------------------------------------');
