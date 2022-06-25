@@ -20,7 +20,9 @@ if (dataInformada > dataAtual) // Teste de condição para verificar a disponibi
             {
             console.log ('----------------------------------------------');
             console.log ('Você tem idade permitida para participar'); // Mensagem caso a condição de idade seja verdadeira.
-                contadorConvidados = quantidadeConvidados + 1; // A partir do momento em que as duas primeiras condições são satisfeitas, automaticamente o convidado tem todos os requisitos para participar. Portanto, o contador serve para adicionar uma pessoa a mais.
+            contadorConvidados ++;// A partir do momento em que as duas primeiras condições são satisfeitas, automaticamente o convidado tem todos os requisitos para participar. Portanto, o contador serve para adicionar uma pessoa a mais.
+            quantidadeConvidados = contadorConvidados; //Atualização da capacidade de pessoas.
+            
                 if(contadorConvidados <= 100) // Condição de limite de capacidade.
                     {
                     console.log ('----------------------------------------------');
